@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            color: white;
+
+        }
+        h2{
+            color: white;
+
+
+        }
+        h1{
+            color: white;
+        }
+        button{
+            background-color: white;
+            height:50px;
+            width: 150px;
+
+
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+
+    <div style="height:100px; width:100%; border: 5px solid rgba(0,0,255,1) ;text-align: center;background-color: black;">
+    <h1>Żródlana woda uśmiechu doda!!!</h1>
+
+    </div>
+
+    <div style="float:left; height:730px; width:50%; background: linear-gradient(0deg, rgba(34,195,177,1) 0%, rgba(0,0,255,1) 100%); text-align: center;">
+
+        <div style="height:500px; width:250px; background-color: white; margin-top: 100px; margin-left: 400px;text-align: center; background-color: black;border-radius: 10%;">
+            <h2>cennik:</h2>
+            <h3>Woda Żywiec :                 1,50zł/1L
+           <p> Woda Muszymianka :                1,60zł/1L
+           <p>Woda Cisowianka  :                1,70zł/1L</h3>
+            <p> Kranowa                          0,50zł/1L</p>
+
+
+            <h2>Formularz Zamuwienia</h2>
+            <h3>Rodzaj wody:<select>
+                <form name="formularz">
+                <option value='A'>Żywiec</option>
+                <option value='B'>Muszymianka</option>
+                <option value='C'>Cisowianka</option>
+                <option value='D'>Kranowa</option>
+                </select>
+           
+
+                <BR>
+
+                <label for='ilosc'>Ile butelek? </label>
+                <input type='number' id='ilosc' name='ilosc'>
+                <BR>
+                <input type='button' value='Oblicz' onclick="oblicz()">
+                </form>
+                <BR>
+
+                Wynik:
+                <h3 id='wynik'></h3>
+
+                
+            </h3>
+        </div>
+
+    </div>
+
+    <div style="float:left; height:730px; width:50%; background: linear-gradient(0deg, rgba(34,195,177,1) 0%, rgba(0,0,255,1) 100%); ">
+
+    </div>
+
+    <div style="float:right;height:100px; width:100%;background-color:rgb(34,195,177,1) ;text-align: right;">
+        
+        <h3>„Początkiem wszechrzeczy jest woda.”
+
+        <p>Tales z Miletu</p></h3>
+
+    </div>
+
+                        <script>
+                function oblicz(){
+                var wynik=0;
+                var typ=document.forms['formularz']['typ'].value;
+                var ilosc=document.forms['formularz']['ilosc'].value;
+                if(typ=='A')
+                {
+                wynik+=1.5*ilosc;
+                }
+                else if(typ=='B')
+                {
+                wynik+=1.6*ilosc;
+                }
+                else if(typ=='C')
+                {
+                wynik+=1.7*ilosc;
+                }
+                else if(typ=='D')
+                {
+                wynik+=0.5*ilosc;
+                }
+
+                document.getElementById('wynik').innerHTML=wynik;
+                }
+                </script>
+
+
+
+
+</body>
+</html>
